@@ -1,6 +1,6 @@
 /* EDIT COLORS: Change these CSS variables to adjust the whole site's palette. */
 :root {
-  --bg: #fff8f3;
+  --bg: #f3e1d7;
   --paper: #ffffff;
   --ink: #332821;
   --muted: #725f54;
@@ -25,8 +25,8 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(247, 217, 213, 0.6), transparent 34rem),
-    linear-gradient(180deg, #fff8f3 0%, #fffaf7 48%, #fff3ef 100%);
+    radial-gradient(circle at top left, rgba(224, 172, 162, 0.54), transparent 34rem),
+    linear-gradient(180deg, #f3e1d7 0%, #f6e9e0 48%, #ecd4cc 100%);
   color: var(--ink);
   font-family: "Inter", Arial, sans-serif;
   font-size: 16px;
