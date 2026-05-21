@@ -46,6 +46,11 @@ a {
   color: inherit;
 }
 
+main {
+  position: relative;
+  overflow: hidden;
+}
+
 .skip-link {
   position: absolute;
   left: 1rem;
@@ -408,6 +413,58 @@ h3 {
   text-align: center;
 }
 
+.sun-scatter {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sun-art {
+  position: absolute;
+  width: clamp(72px, 10vw, 132px);
+  height: auto;
+  opacity: 0.72;
+  filter: drop-shadow(0 14px 18px rgba(92, 58, 43, 0.16));
+  animation: sunDrift 9s ease-in-out infinite;
+}
+
+.section,
+.surprise-section {
+  position: relative;
+  z-index: 1;
+}
+
+.sun-art-one {
+  top: 104vh;
+  right: min(5vw, 4rem);
+  transform: rotate(8deg);
+}
+
+.sun-art-two {
+  top: 156vh;
+  left: min(5vw, 4rem);
+  width: clamp(80px, 12vw, 150px);
+  opacity: 0.64;
+  animation-delay: -2s;
+}
+
+.sun-art-three {
+  top: 236vh;
+  right: 8vw;
+  width: clamp(68px, 9vw, 116px);
+  opacity: 0.58;
+  animation-delay: -4s;
+}
+
+.sun-art-four {
+  bottom: 9rem;
+  left: 7vw;
+  width: clamp(74px, 10vw, 128px);
+  opacity: 0.6;
+  animation-delay: -6s;
+}
+
 .floating-shapes span {
   position: absolute;
   opacity: 0.72;
@@ -509,6 +566,16 @@ h3 {
   }
 }
 
+@keyframes sunDrift {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -14px;
+  }
+}
+
 @media (max-width: 900px) {
   .card-grid,
   .gallery-grid {
@@ -571,6 +638,30 @@ h3 {
 
   .floating-shapes span {
     opacity: 0.46;
+  }
+
+  .sun-art {
+    width: 76px;
+    opacity: 0.38;
+  }
+
+  .sun-art-one {
+    top: 101vh;
+    right: -22px;
+  }
+
+  .sun-art-two {
+    top: 172vh;
+    left: -24px;
+  }
+
+  .sun-art-three {
+    top: 277vh;
+    right: -20px;
+  }
+
+  .sun-art-four {
+    display: none;
   }
 }
 
