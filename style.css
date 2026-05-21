@@ -136,13 +136,16 @@ a {
   place-items: center;
   overflow: hidden;
   padding: 5rem 1rem;
+  background:
+    linear-gradient(180deg, rgba(35, 22, 17, 0.34), rgba(35, 22, 17, 0.58)),
+    url("photos/SUNSET.jpg") center / cover no-repeat;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 7% 6%;
-  border: 1px solid rgba(198, 111, 120, 0.18);
+  border: 1px solid rgba(255, 248, 243, 0.42);
   border-radius: 28px;
   pointer-events: none;
 }
@@ -151,7 +154,9 @@ a {
   position: relative;
   z-index: 1;
   width: min(780px, 100%);
+  color: #fff8f3;
   text-align: center;
+  text-shadow: 0 2px 18px rgba(35, 22, 17, 0.44);
 }
 
 .eyebrow,
