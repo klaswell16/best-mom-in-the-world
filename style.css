@@ -438,6 +438,13 @@ h3 {
 .sun-art-one {
   top: 104vh;
   right: min(5vw, 4rem);
+  opacity: 0.92;
+  filter:
+    brightness(0.92)
+    contrast(1.25)
+    saturate(1.18)
+    drop-shadow(0 12px 18px rgba(92, 58, 43, 0.24))
+    drop-shadow(0 0 14px rgba(255, 248, 243, 0.72));
   transform: rotate(8deg);
 }
 
@@ -453,7 +460,13 @@ h3 {
   top: 236vh;
   right: 8vw;
   width: clamp(68px, 9vw, 116px);
-  opacity: 0.58;
+  opacity: 0.88;
+  filter:
+    brightness(0.92)
+    contrast(1.25)
+    saturate(1.18)
+    drop-shadow(0 12px 18px rgba(92, 58, 43, 0.24))
+    drop-shadow(0 0 14px rgba(255, 248, 243, 0.72));
   animation-delay: -4s;
 }
 
