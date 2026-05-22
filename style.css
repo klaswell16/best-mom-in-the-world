@@ -452,17 +452,33 @@ h3 {
 .sun-art-three {
   top: 236vh;
   right: 8vw;
-  width: clamp(68px, 9vw, 116px);
-  opacity: 0.58;
+  width: clamp(78px, 10vw, 128px);
+  opacity: 0.68;
   animation-delay: -4s;
 }
 
 .sun-art-four {
-  bottom: 9rem;
-  left: 7vw;
+  top: 304vh;
+  right: min(6vw, 5rem);
+  width: clamp(68px, 9vw, 116px);
+  
+  animation-delay: -5s;
+}
+
+.sun-art-five {
+  bottom: 50rem;
+  left: 9vw;
   width: clamp(74px, 10vw, 128px);
-  opacity: 0.6;
+  
   animation-delay: -6s;
+}
+
+.sun-art-six {
+  bottom: 9rem;
+  left: 9vw;
+  width: clamp(82px, 11vw, 138px);
+  opacity: 0.62;
+  animation-delay: -7s;
 }
 
 .floating-shapes span {
@@ -661,7 +677,17 @@ h3 {
   }
 
   .sun-art-four {
+    top: 355vh;
+    right: -24px;
+  }
+
+  .sun-art-five {
     display: none;
+  }
+
+  .sun-art-six {
+    bottom: 6rem;
+    right: -24px;
   }
 }
 
