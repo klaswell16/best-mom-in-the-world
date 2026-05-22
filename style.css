@@ -385,7 +385,7 @@ h3 {
 }
 
 .surprise-section {
-  padding: clamp(4rem, 8vw, 6rem) 1rem;
+  padding: clamp(4rem, 8vw, 6rem) 1rem clamp(3rem, 7vw, 5rem);
   text-align: center;
 }
 
@@ -394,12 +394,29 @@ h3 {
 }
 
 .surprise-message {
-  width: min(560px, 100%);
-  margin: 1.2rem auto 0;
-  padding: 1rem 1.2rem;
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+  width: 100vw;
+  min-height: clamp(360px, 48vw, 620px);
+  margin: clamp(2.5rem, 6vw, 4rem) calc(50% - 50vw) clamp(-5rem, -7vw, -3rem);
+  display: grid;
+  place-items: end center;
+  padding: clamp(12rem, 26vw, 22rem) max(1.25rem, calc((100vw - 760px) / 2)) clamp(3rem, 8vw, 5rem);
+  background:
+    linear-gradient(180deg, rgba(243, 225, 215, 0.82) 0%, rgba(243, 225, 215, 0.12) 20%, rgba(35, 22, 17, 0.04) 52%, rgba(35, 22, 17, 0.28) 100%),
+    url("photos/sunsky.png") center / cover no-repeat;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: clamp(1.08rem, 2.5vw, 1.35rem);
+  text-shadow:
+    0 2px 6px rgba(35, 22, 17, 0.86),
+    0 0 18px rgba(35, 22, 17, 0.58);
+}
+
+.surprise-section .surprise-message {
+  color: #ffffff;
+}
+
+.surprise-message[hidden] {
+  display: none;
 }
 
 .surprise-message.is-visible {

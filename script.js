@@ -28,6 +28,7 @@ if (surpriseButton && surpriseMessage) {
       surpriseMessage.removeAttribute("hidden");
       surpriseMessage.classList.add("is-visible");
       surpriseButton.textContent = "Hide message";
+      surpriseMessage.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
       surpriseMessage.setAttribute("hidden", "");
       surpriseMessage.classList.remove("is-visible");
