@@ -37,6 +37,10 @@ body.menu-open {
   overflow: hidden;
 }
 
+body.lightbox-open {
+  overflow: hidden;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -318,6 +322,17 @@ h3 {
   overflow: hidden;
 }
 
+.gallery-item img {
+  cursor: zoom-in;
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
 .photo-placeholder {
   position: relative;
   min-height: 260px;
@@ -432,6 +447,43 @@ h3 {
   border-top: 1px solid var(--line);
   color: var(--muted);
   text-align: center;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 4vw, 2rem);
+  background: rgba(35, 22, 17, 0.88);
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox img {
+  max-width: min(100%, 1100px);
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: var(--radius);
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.42);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 248, 243, 0.36);
+  border-radius: 50%;
+  background: rgba(255, 248, 243, 0.16);
+  color: #fff8f3;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1;
 }
 
 .sun-scatter {

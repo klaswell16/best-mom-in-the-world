@@ -2,6 +2,10 @@ const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 const surpriseButton = document.querySelector(".surprise-button");
 const surpriseMessage = document.querySelector("#surpriseMessage");
+const galleryImages = document.querySelectorAll(".gallery-item img");
+const imageLightbox = document.querySelector("#imageLightbox");
+const lightboxImage = imageLightbox?.querySelector("img");
+const lightboxClose = imageLightbox?.querySelector(".lightbox-close");
 const animatedItems = document.querySelectorAll(".fade-in");
 
 if (navToggle && navLinks) {
@@ -33,6 +37,38 @@ if (surpriseButton && surpriseMessage) {
       surpriseMessage.setAttribute("hidden", "");
       surpriseMessage.classList.remove("is-visible");
       surpriseButton.textContent = "Reveal message";
+    }
+  });
+}
+
+if (imageLightbox && lightboxImage && lightboxClose) {
+  const closeLightbox = () => {
+    imageLightbox.setAttribute("hidden", "");
+    document.body.classList.remove("lightbox-open");
+    lightboxImage.removeAttribute("src");
+    lightboxImage.alt = "";
+  };
+
+  galleryImages.forEach((image) => {
+    image.addEventListener("click", () => {
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt;
+      imageLightbox.removeAttribute("hidden");
+      document.body.classList.add("lightbox-open");
+    });
+  });
+
+  lightboxClose.addEventListener("click", closeLightbox);
+
+  imageLightbox.addEventListener("click", (event) => {
+    if (event.target === imageLightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !imageLightbox.hasAttribute("hidden")) {
+      closeLightbox();
     }
   });
 }
